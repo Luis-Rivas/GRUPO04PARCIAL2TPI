@@ -1,0 +1,49 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Ingeniería"
+    },
+    {
+      "id": 2,
+      "nombre": "Derecho"
+    },
+    {
+      "id": 3,
+      "nombre": "Medicina"
+    },
+    {
+      "id": 4,
+      "nombre": "Economía"
+    }
+  ],
+  "carreras": [
+    {
+      "id": 1,
+      "imagen": "url1",
+      "video": "url1",
+      "categoria": "Ingenieria",
+      "nombre": "Ingeniería de Sistemas Informáticos",
+      "descripcion": "",
+      "duracion": "5 años"
+    },
+    {
+      "id": 2,
+      "imagen": "url1",
+      "video": "url1",
+      "categoria": "Economía",
+      "nombre": "Licenciatura en contaduría pública",
+      "descripcion": "",
+      "duracion": "5 años"
+    },
+    {
+      "imagen": "url3",
+      "video": "url3",
+      "categoria": "Ingenieria",
+      "nombre": "Ingeniería de Software",
+      "descripcion": "",
+      "duracion": "5 años",
+      "id": 3
+    }
+  ]
+}
