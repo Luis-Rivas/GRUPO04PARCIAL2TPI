@@ -1,4 +1,11 @@
 img {width:3cm;height:3cm;}
+h1 {text-align: center; font-family: 'Times New Roman'; font-size: 70px;}
+h2 {text-align: center; font-family: serif; font-size: 50px}
+p {text-align: center;}
+button {font-size: xx-large; font-family: 'Times New Roman'}
+#listado {text-align: center; font-family: 'Times New Roman';}
+form, input {font-size: 25px;}
+thead {font-size: x-large;}
 table {width:80%;margin:auto;}
 th#price {cursor:pointer;}
 li {color:blue;}

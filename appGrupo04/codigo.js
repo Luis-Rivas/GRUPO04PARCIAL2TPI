@@ -1,26 +1,22 @@
-var fila="<tr><td class='id'></td><td class='foto'></td><td class='price'></td><td class='title'></td><td class='description'></td><td class='category'></td></tr>";
-	 var productos=null;
+var fila="<tr id=''><td class='id'></td><td class='foto'></td><td class='video'></td><td class='nombre'></td><td class='descripción'></td><td class='duracion'></td><td class='categoria'></td><td class='accion'></td></tr>";
+var carreras=null;
 	 function crearBoton(id){
-		 var boton="<button class='x' onclick='borrarProducto("+id+");'>Borrar</button>";
+		 var boton="<button class='x' onclick='borrarCarrera("+id+");'>Borrar</button>";
          return boton;
 	 }
-	 //Mostrar productos
-	function obtenerProductos() {
+	 //Mostrar Carreras
+	function obtenerCarreras() {
 	  fetch('http://localhost:3000/carreras')
             .then(res=>res.json())
             .then(data=>{
-				productos=data;
-				productos.forEach(
-				function(producto){
-					producto.price=parseFloat(producto.price)
-				});
-				listarProductos(data)})//
+				carreras=data;				
+				listarCarreras(carreras)})
 			.catch(error => {
                     alert(error);
                 } )
 }
 //Eliminar Carrera
-function borrarProducto(id) {
+function borrarCarrera(id) {
 	var delresult;
 	var url='http://localhost:3000/carreras/'+id;
 	
@@ -28,10 +24,10 @@ function borrarProducto(id) {
             .then( res=>res.status)
             .then(codigo=>{
 switch(codigo) {
-			case 200: alert("producto borrado");			         
+			case 200: alert("Carrerar Universitaria borrada con éxito");			         
 					  document.querySelector("inventario").click();
 					  break;
-			case 404: alert("producto no existe");break; }
+			case 404: alert("Carrera universitaria no existe");break; }
 });	  	
 		 				 
 }
@@ -40,53 +36,74 @@ switch(codigo) {
   function codigoCat(catstr) {
 	var code="null";
 	switch(catstr) {
-		case "electronicos":code="c1";break;
-	    case "joyeria":code="c2";break;
-		case "caballeros":code="c3";break;
-		case "damas":code="c4";break;
+		case "Ingenieria":code="c1";break;
+	    case "Derecho":code="c2";break;
+		case "Medicina":code="c3";break;
+		case "Economía":code="c4";break;
 	}
 	return code;
 }   
-	  var orden=0;
+var orden=0;
 	  
 //Listar Carreras; esta funcion se utiliza en mostrar productos
-	function listarProductos(productos) {
-	  var precio=document.getElementById("price"); 
-	  precio.setAttribute("onclick", "orden*=-1;listarProductos(productos);");
-	  var num=productos.length;
+	function listarCarreras(carreras) {
+	  var nombre=document.getElementById("nombre"); 
+	  nombre.setAttribute("onclick", "orden*=-1;listarCarreras(carreras);");
+	  var categoria=document.getElementById("Categoria"); 
+	  categoria.setAttribute("onclick", "orden*=-1;listarCarreras(carreras);");
+	  var num=carreras.length;
 	  var listado=document.getElementById("listado");
-	  var ids,titles,prices,descriptions,categories,fotos;
+	  var ids,videos,nombres,descriptions,categories,fotos,duracion,accion;
 	  var tbody=document.getElementById("tbody"),nfila=0;
 	  tbody.innerHTML="";
 	  var catcode;
 	  for(i=0;i<num;i++) tbody.innerHTML+=fila;
 	  var tr; 
 	  ids=document.getElementsByClassName("id");
-	  titles=document.getElementsByClassName("title");
-	  descriptions=document.getElementsByClassName("description");
-	  categories=document.getElementsByClassName("category");   
+	  videos=document.getElementsByClassName("video");
+	  descriptions=document.getElementsByClassName("descripción");
+	  categories=document.getElementsByClassName("categoria");   
 	  fotos=document.getElementsByClassName("foto");   
-	  prices=document.getElementsByClassName("price");   
-	  if(orden===0) {orden=-1;precio.innerHTML="Precio"}
-	  else
-	     if(orden==1) {ordenarAsc(productos,"price");precio.innerHTML="Precio A";precio.style.color="darkgreen"}
-	     else 
-	       if(orden==-1) {ordenarDesc(productos,"price");precio.innerHTML="Precio D";precio.style.color="blue"}
+	  nombres=document.getElementsByClassName("nombre");
+	  duracion=document.getElementsByClassName("duracion");
+	  accion=document.getElementsByClassName("accion");
+	  if(orden===0) 
+	  {
+		orden=-1;nombre.innerHTML="Nombre de Carrera"
+	  }
+	  else{
+	    if(orden==1) {ordenarAsc(carreras,"nombre");nombre.innerHTML="Nombre de Carrera";nombre.style.color="black"}
+	    else 
+	    if(orden==-1) {ordenarDesc(carreras,"nombre");nombre.innerHTML="Nombre de Carrera";nombre.style.color="black"}
+	  }
+	  if(orden===0) 
+	  {
+		  orden=-1;categoria.innerHTML="Categoria"
+	  }
+	  else{
+		if(orden==1) {ordenarAsc(carreras,"categoria");categoria.innerHTML="Categoria";categoria.style.color="black";}
+		else 
+		if(orden==-1) {ordenarDesc(carreras,"categoria");categoria.innerHTML="Categoria";categoria.style.color="black";}
+	  }	  
 	
 		  var boton="";
 	  	  listado.style.display="block";
 	  for(nfila=0;nfila<num;nfila++) {
-        ids[nfila].innerHTML=productos[nfila].id;
-		boton = crearBoton(productos[nfila].id);
-		titles[nfila].innerHTML=productos[nfila].title;
-		descriptions[nfila].innerHTML=productos[nfila].description;
-		categories[nfila].innerHTML=productos[nfila].category+boton;
-		catcode=codigoCat(productos[nfila].category);
+        ids[nfila].innerHTML=carreras[nfila].id;
+		boton = crearBoton(carreras[nfila].id);	
+		descriptions[nfila].innerHTML=carreras[nfila].descripcion;
+		duracion[nfila].innerHTML=carreras[nfila].duracion;
+		categories[nfila].innerHTML=carreras[nfila].categoria;
+		accion[nfila].innerHTML=boton;
+		catcode=codigoCat(carreras[nfila].categoria);
 		tr=categories[nfila].parentElement;
 		tr.setAttribute("class",catcode);
-		prices[nfila].innerHTML="$"+productos[nfila].price;
-		fotos[nfila].innerHTML="<img src='"+productos[nfila].image+"'>";
-		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+productos[nfila].image+"');" );
+		tr.setAttribute("id","fila"+carreras[nfila].id)
+		nombres[nfila].innerHTML=carreras[nfila].nombre;
+		fotos[nfila].innerHTML="<img src='"+carreras[nfila].imagen+"'>";
+		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+carreras[nfila].imagen+"');" );
+		videos[nfila].innerHTML="<img src='"+carreras[nfila].video+"'>";
+		videos[nfila].firstChild.setAttribute("onclick","window.open('"+carreras[nfila].video+"');" );		
 		}
 	}
 

@@ -2,36 +2,42 @@
 <html lang="es">
 
 <head>
-	<title>Ejemplo web api</title>
+	<title>Carreras Universitarias</title>
 	<meta charset="utf-8"  />
 <LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" MEDIA=screen>
 <script src="codigo.js"></script>
 
 </head>
 
-<body onload="obtenerProductos();">
- <h1>… Ejemplo web api</h1>
-     <p>… Sus datos personales aquí …</p>
-	 <p><button id="inventario" onclick="obtenerProductos();this.style.display='none';">Obtener Productos</button> </p>
+<body onload="obtenerCarreras();">
+ <h1>Carreras Universitarias</h1>
+     <h2>Universidad de El Salvador</h2>
+	 <p><button id="inventario" onclick="obtenerCarreras();this.style.display='none';">Obtener Carreras</button> </p>
 	 <div id="listado" style="display:none;">
 	 <form name="filtroprods" id="filtroprods">
 	   Seleccione Categorias 
-	   <input type="checkbox" id="c1" value="c1" checked>Electronicos
-	 <input type="checkbox" id="c2" value="c2" checked>Joyería
-   <input type="checkbox" id="c3" value="c3" checked>Ropa Caballero
-   <input type="checkbox" id="c4" value="c4" checked>Ropa Dama
+	   <input type="checkbox" id="c1" value="c1" checked>Ingenieria
+	 <input type="checkbox" id="c2" value="c2" checked>Derecho
+   <input type="checkbox" id="c3" value="c3" checked>Medicina
+   <input type="checkbox" id="c4" value="c4" checked>Economía
    <ol><li>Click en la imagen para Acercamiento</li>
-   <li>Click en precio para ordenar Asc o Desc</li></ol>
+   <li>Click en Nombre de la carrera o en Categoria para ordenar Asc o Desc</li></ol>   
      <table id="tabla" border="1">
 	 <thead>
-	 <tr><th>id</th><th>foto</th><th  id="price">price</th>
-	 <th>title</th><th>description</th><th>category</th></tr>
+	 <tr>
+		 <th>id</th>
+		 <th>Imagen</th>
+		 <th>Video</th>		 
+	 	 <th id="nombre">Nombre de Carrera</th>
+		 <th>Descripción</th>
+		 <th>Duración</th>
+		 <th id="Categoria">Categoria</th>
+		 <th>Acción</th>
+	</tr>
 	 </thead>
 	 <tbody id="tbody"></tbody>
 	 </table>
 	 </form>
 	 </div>
-	
-     
 </body>
 </html>
