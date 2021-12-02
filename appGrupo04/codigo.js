@@ -21,9 +21,10 @@ var carreras=null;
 		if (codigo.disabled){	
 			actualizarCarrera();
 		}
-		else
-		alert("funcion no implementada");
-		crearCarrera();	
+		else{
+			agregarCarrera();
+			location.reload();
+		}
 	}
 
 	
@@ -201,5 +202,25 @@ var addresult;
 	 'Content-type': 'application/json; charset=UTF-8',
 	  }}).then(response=>response.json()).then(data=>addresult=data);
 	  
+}
+
+
+function agregarCarrera(){
+	var codigo = document.getElementById('id-value').value;
+	var nombre = document.getElementById('nombre-value').value;
+	var imagen = document.getElementById('imagen-value').value;
+	var video = document.getElementById('video-value').value;
+	var descripcion = document.getElementById('descripcion-value').value;
+	var duracion = document.getElementById('duracion-value').value;
+	var categoria = document.getElementById('categoria-value').value;
+	var addresult;
+	var miCarrera = {id:codigo,imagen:imagen,video:video,categoria:categoria,nombre: nombre,	descripcion:descripcion,duracion: duracion};
+	fetch('http://localhost:3000/carreras', {
+		method: "POST",
+		body: JSON.stringify(miCarrera),
+		headers: {'Accept': 'application/json','Content-type': 'application/json; charset=UTF-8',}
+	}).then(response=>response.json()).then(data=>addresult=data);
+
+
 }
 
