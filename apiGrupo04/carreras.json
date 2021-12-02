@@ -37,11 +37,20 @@
       "duracion": "5 años"
     },
     {
-      "id": 3,
       "imagen": "url3",
       "video": "url3",
       "categoria": "Ingenieria",
       "nombre": "Ingeniería de Software",
+      "descripcion": "",
+      "duracion": "5 años",
+      "id": 3
+    },
+    {
+      "id": "4",
+      "imagen": "",
+      "video": "",
+      "categoria": "ingenieria",
+      "nombre": "Ingenieria quimica",
       "descripcion": "",
       "duracion": "5 años"
     }
