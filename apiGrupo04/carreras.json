@@ -20,38 +20,182 @@
   "carreras": [
     {
       "id": 1,
-      "imagen": "url1",
-      "video": "url1",
-      "categoria": "Ingenieria",
+      "imagen": "https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_960_720.jpg",
+      "video": "https://www.youtube.com/embed/Sb3utwFXZyo",
+      "categoria": "Ingeniería",
       "nombre": "Ingeniería de Sistemas Informáticos",
-      "descripcion": "",
+      "descripcion": "La Ingeniería de Sistemas Informáticos abarca conocimientos de Ciencias de Computación, Matemática, Ingeniería de Software y Gestión Empresarial.",
       "duracion": "5 años"
     },
     {
       "id": 2,
-      "imagen": "url1",
-      "video": "url1",
+      "imagen": "https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_960_720.jpg",
+      "video": "https://www.youtube.com/embed/ERLB2Jeg3jw",
       "categoria": "Economía",
       "nombre": "Licenciatura en contaduría pública",
+      "descripcion": "Los estudios de Contaduría Púbica persiguen formar profesionales con amplio dominio de técnica, sistemas contables y conocimientos legales que se utilizan modernamente, para examinar y dictaminar sobre los resultados reales de las ocupaciones de las empresas, y además dotarlos de conocimiento suficiente, para analizar y presentar las bases que permitan orientar eficientemente las políticas financieras de la Empresa y así encaminar su ejercicio profesional al mejor desarrollo de nuestro pueblo, procurando tener un conocimiento científico y objetivo de la realidad.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 3,
+      "imagen": "https://cdn.pixabay.com/photo/2018/03/03/21/58/industry-3196696_960_720.jpg",
+      "video": "https://www.youtube.com/embed/T1kOkZw1VOo",
+      "categoria": "Ingeniería",
+      "nombre": "Ingeniería Eléctrica",
+      "descripcion": "La Ingeniería Eléctrica se define como la rama de la Ingeniería que permite formar profesionales capaces de diseñar, instalar, operar y mantener en condiciones óptimas de operación y eficiencia los sistemas eléctricos, electrónicos y de telecomunicaciones que intervienen en la generación, transmisión y distribución de la energía eléctrica así como también sistemas electrónicos y aquellos que reciben y transmiten señales de información en las Telecomunicaciones.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 4,
+      "imagen": "https://cdn.pixabay.com/photo/2020/03/09/13/54/engineer-4915799_960_720.jpg",
+      "video": "https://www.youtube.com/embed/xvFVZAeXRm0",
+      "categoria": "Ingeniería",
+      "nombre": "Ingeniería Mecánica",
+      "descripcion": "La Ingeniería mecánica es la rama de la Ingeniería que, basada en principios científicos, diseña, construye, opera y mantiene en forma eficiente, segura y económica, dispositivos, máquinas e instalaciones mecánicas para la solución de problemas prácticos de beneficio social. Interviene además en procesos industriales, investigaciones, mediciones, supervisión, asesoría consultoría, instalación y reparación de sistemas mecánicos.  El estudiante de la carrera de Ingeniería Mecánica, a través del proceso educativo, tendrá experiencias de aprendizaje de diversa índole tales como: clases expositivas, laboratorios, trabajos de investigación (bibliografía, de campo, etc.), discusiones de problemas, proyectos constructivos, visitas técnicas, formulación de proyectos, acceso a información a través de INTERNET, correo electrónico, etc.  La solución de problemas como parte fundamental del aspecto formativo, conlleva a incorporar y ejecutar en el plan de estudios vigente metodologías vigentes que se fundamentan en el análisis de las necesidades reales y actuales del país. Se pretende también que el educando desarrolle creatividad y capacidad para adecuar la ciencia y la tecnología a las necesidades del país, fomentar la investigación aplicada.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 5,
+      "imagen": "https://cdn.pixabay.com/photo/2017/08/20/02/47/foundation-2660502_960_720.jpg",
+      "video": "https://www.youtube.com/embed/X1AwJovgRVY",
+      "categoria": "Ingeniería",
+      "nombre": "Ingeniería Civil",
+      "descripcion": "La carrera de Ingeniería Civil consiste en la aplicación de métodos, técnicas y tecnologías, procesos y procedimientos, conceptos y principios científicos de aplicación práctica que constituyen el planeamiento, diseño, construcción, dirección, supervisión, administración de las obras civiles que permiten el desarrollo físico de los espacios y territorios de forma racional, funcional y segura. En esta carrera se da formación necesaria para ser eficientes en la elaboración y ejecución de proyectos pequeños, medianos y de grandes obras de infraestructura, así como para poder ejercer liberalmente o como empresario efectivo en la propiciación del desarrollo nacional.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 6,
+      "imagen": "https://cdn.pixabay.com/photo/2020/03/05/16/44/engineer-4904884_960_720.jpg",
+      "video": "https://www.youtube.com/embed/c1zXL4eiVSk",
+      "categoria": "Ingeniería",
+      "nombre": "Ingeniería de software",
+      "descripcion": "Esta disciplina trasciende la actividad de programación, que es el pilar fundamental a la hora de crear una aplicación. El ingeniero de software se encarga de toda la gestión del proyecto para que éste se pueda desarrollar en un plazo determinado y con el presupuesto previsto.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 7,
+      "imagen": "https://cdn.pixabay.com/photo/2016/11/19/21/01/analysis-1841158_960_720.jpg",
+      "video": "https://www.youtube.com/embed/Ewh84qWfx68",
+      "categoria": "Economía",
+      "nombre": "Licenciatura en administración de empresas",
+      "descripcion": "",
+      "duracion": "5"
+    },
+    {
+      "id": 8,
+      "imagen": "https://cdn.pixabay.com/photo/2021/02/01/15/29/social-media-marketing-5971028_960_720.jpg",
+      "video": "https://www.youtube.com/embed/9GthZMQ_q6Y",
+      "categoria": "Economía",
+      "nombre": "Licenciatura en Mercadeo Internacional",
       "descripcion": "",
       "duracion": "5 años"
     },
     {
-      "imagen": "url3",
-      "video": "url3",
-      "categoria": "Ingenieria",
-      "nombre": "Ingeniería de Software",
+      "id": 9,
+      "imagen": "https://cdn.pixabay.com/photo/2016/10/09/19/19/coins-1726618_960_720.jpg",
+      "video": "https://www.youtube.com/embed/NU52K6NRXbA",
+      "categoria": "Economía",
+      "nombre": "Licenciatura en Economía",
       "descripcion": "",
-      "duracion": "5 años",
-      "id": 3
+      "duracion": "5 años"
     },
     {
-      "id": "4",
-      "imagen": "",
-      "video": "",
-      "categoria": "ingenieria",
-      "nombre": "Ingenieria quimica",
-      "descripcion": "",
+      "id": 10,
+      "imagen": "https://cdn.pixabay.com/photo/2016/01/09/18/27/old-1130736_960_720.jpg",
+      "video": "https://www.youtube.com/embed/TK4RLj1KDTg",
+      "categoria": "Economía",
+      "nombre": "Licenciatura en Administración de Empresas Turísticas",
+      "descripcion": " La Administración de Empresas Turísticas es la encargada de basarse en la capacidad para: Comprender, Describir, Analizar todo lo referente al lo denominado entorno tanto social como económico de la actividad turística específica de un país. ",
+      "duracion": "5 años"
+    },
+    {
+      "id": 11,
+      "imagen": "https://cdn.pixabay.com/photo/2017/07/10/23/49/club-2492011_960_720.jpg",
+      "video": "https://www.youtube.com/embed/Y4gpQCJrK6s",
+      "categoria": "Derecho",
+      "nombre": "Licenciatura en Ciencias Jurídicas",
+      "descripcion": "Ubica al Derecho como un producto social, por lo que se estudian sus bases económicas, sociales, filosóficas, las cuales se proyectan en el conocimiento de las diferentes ramas del derecho y su aplicación practica en la regulación de la actividad estatal, tanto en la administración de justicia, como en la Actividad Administrativa y Legislativa. Así como la regulación entre los particulares; de tal manera que a través de la integración del conocimiento, el profesional: interprete en forma crítica la realidad jurídica y cuente con los elementos necesarios para proponer su transformación positiva.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 12,
+      "imagen": "https://cdn.pixabay.com/photo/2020/12/05/14/08/man-5806013_960_720.jpg",
+      "video": "https://www.youtube.com/embed/rYlWtEFrlSQ",
+      "categoria": "Derecho",
+      "nombre": "Licenciatura en Derecho Civil",
+      "descripcion": "A través de esta especialidad se regula el estado civil de las personas, obligaciones y contratos, propiedades, así como relaciones que influyan o sucedan en la vida ciudadana. Reguladores del funcionamiento de una sociedad.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 13,
+      "imagen": "https://cdn.pixabay.com/photo/2015/11/26/03/15/law-1063249_960_720.jpg",
+      "video": "https://www.youtube.com/embed/CBCvyI08RuI",
+      "categoria": "Derecho",
+      "nombre": "Licenciatura en Derecho Penal",
+      "descripcion": "Se trata de aquel que establece y regula el castigo de los crímenes dentro de la sociedad, es decir, controla la potestad punitiva del Estado ante la ciudadanía.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 14,
+      "imagen": "https://cdn.pixabay.com/photo/2016/03/02/20/13/grocery-1232944_960_720.jpg",
+      "video": "https://www.youtube.com/embed/W6kJc_BQ48g",
+      "categoria": "Derecho",
+      "nombre": "Licenciatura en Derecho Comercial",
+      "descripcion": "Esta rama regula las normas relativas al ejercicio del comercio como actividad económica y social.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 15,
+      "imagen": "https://cdn.pixabay.com/photo/2017/09/09/01/27/attorney-2730806_960_720.jpg",
+      "video": "https://www.youtube.com/embed/sQQCLxakLK0",
+      "categoria": "Derecho",
+      "nombre": "Licenciatura en Derecho Constitucional",
+      "descripcion": "Esta es una de las ramas del Derecho que se encarga de analizar y controlar las leyes fundamentales del Estado. Una de las  principales tareas de estos especialistas es resolver controversias constitucionales.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 16,
+      "imagen": "https://cdn.pixabay.com/photo/2020/08/03/09/39/medical-5459630_960_720.png",
+      "video": "https://www.youtube.com/embed/BmMBQi_c6d4",
+      "categoria": "Medicina",
+      "nombre": "Doctorado en Medicina",
+      "descripcion": "Formar un profesional con una excelente preparación académica adecuada a la realidad del país, con capacidad de servicio hacia sus semejantes ya la comunidad donde trabaja, capaz de conocer la realidad del sector salud, plantear soluciones para enfrentarla y propiciar la modificación del medio social en que se desenvuelve",
+      "duracion": "8 años"
+    },
+    {
+      "id": 17,
+      "imagen": "https://cdn.pixabay.com/photo/2021/09/13/11/31/scientist-6621069_960_720.png",
+      "video": "https://www.youtube.com/embed/SYyt2m7Cqmc",
+      "categoria": "Medicina",
+      "nombre": "Licenciatura en Laboratorio Clínico",
+      "descripcion": "A través del dominio teórico-práctico de las disciplinas: Hematología, bioquímica sanguínea, inmunoanálisis, inmunohematología, microbiología, urianálisis, coprología, etc. Como parte de su formación específica, el profesional en Laboratorio Clínico, integrante del equipo de salud, contribuye a la prevención, diagnóstico, pronóstico y tratamiento de las enfermedades más prevalentes en el país, por medio de la realización de análisis de laboratorio, dentro de una concepción del proceso salud-enfermedad como un fenómeno socio-natural y estructural.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 18,
+      "imagen": "https://media.istockphoto.com/vectors/multiethnic-nurse-characters-group-vector-id1270360391",
+      "video": "https://www.youtube.com/embed/NYhdJVSb-Ro",
+      "categoria": "Medicina",
+      "nombre": "Licenciatura en Enfermería",
+      "descripcion": "La formación profesional de Enfermería requiere de una metodología activa que permita la adquisición de conocimientos teóricos los cuales deben aplicarse a una práctica concreta; es por ello que el Curriculum Modular inicia con una fundamentación general y básica que junto con las otras disciplinas que conforman el equipo de salud, abordan el proceso Salud-enfermedad desde una perspectiva socionatural.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 19,
+      "imagen": "https://cdn.pixabay.com/photo/2020/04/25/15/04/eye-check-5091177_960_720.jpg",
+      "video": "https://www.youtube.com/embed/FsOryXhPJZk",
+      "categoria": "Medicina",
+      "nombre": "Licenciatura en Optometría",
+      "descripcion": "Formar Licenciado(a)s en Optometría con calidad científica, técnica, ética y humana, que den respuesta a los principales problemas de salud visual que presenta la población salvadoreña; al proveer salud del ojo y del sistema visual aplicando los principios de la atención primaria en salud, brindando, refracción, manejo de enfermedades en el ojo, adaptación de sistemas ópticos, desarrollo de programas de entrenamiento visual, propuestas de mejoras ergonómicas.",
+      "duracion": "5 años"
+    },
+    {
+      "id": 20,
+      "imagen": "https://cdn.pixabay.com/photo/2018/01/22/11/02/hospital-3098683_960_720.jpg",
+      "video": "https://www.youtube.com/embed/it14-xijxVw",
+      "categoria": "Medicina",
+      "nombre": "Licenciatura en Radiología e Imágenes",
+      "descripcion": "Originalmente esta Carrera tenía limitado su campo de acción en la Radiología de procedimientos convencionales, pero respondiendo a las demandas mismas de su perfil ocupacional en el nuevo modelo curricular se incorpora el conocimiento y manejo sistemático de tecnologías modernas, desarrollando habilidades para planificar, organizar y controlar los distintos métodos y técncias que lo lleven a efectuar procedimientos en pro de establecer diagnósticos y/o tratamientos oportunos, utilizando las diferentes especialidades a usar en este campo",
       "duracion": "5 años"
     }
   ]
