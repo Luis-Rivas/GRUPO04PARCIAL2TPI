@@ -1,4 +1,4 @@
-var fila="<tr id=''><td class='id'></td><td class='foto'></td><td class='video'></td><td class='nombre'></td><td class='descripción'></td><td class='duracion'></td><td class='categoria'></td><td><button class='accion2'><button class='accion'></button></button></td></tr>";
+var fila="<tr id=''><td class='id'></td><td class='foto'></td><td class='video'></td><td class='nombre'></td><td class='descripción'></td><td class='duracion'></td><td class='categoria'></td><td><span class='accion2'></span><span class='accion'></span></td></tr>";
 var carreras=null;
 
 
@@ -10,7 +10,7 @@ var carreras=null;
 	 }
 
 	 function crearBotonActualizar(id){
-		var boton="<button class='x' onclick='obtenerDatos("+id+");'>Actualizar</button>";
+		var boton="<button class='x' onclick='obtenerDatos("+id+")'>Actualizar</button>";
 		return boton;
 	}
 
@@ -18,17 +18,18 @@ var carreras=null;
 	function botonGuardar(){
 		
 		var codigo = document.getElementById('id-value');
-		if (codigo.disabled){	
-			actualizarCarrera();
+		if (codigo.hidden){	
+			agregarCarrera();
+			location.reload();
 		}
 		else{
-			agregarCarrera();
+			actualizarCarrera();
 			location.reload();
 		}
 	}
 
 	
-//obtener datos para mostrarlos 
+//obtener datos para mostrarlos(Para actualizar) 
 	function obtenerDatos(codigo){
 	fetch('http://localhost:3000/carreras/'+codigo,{method:"get"})
 	.then(response=>response.json())
@@ -37,8 +38,9 @@ var carreras=null;
 		mostrarDato(carreras)
 	});
 }  	
-//mostar los datos en los campos
+//mostar los datos en los campos(Para actualizar)
 function mostrarDato(carreraOb){
+	var lblcodigo = document.getElementById('lblCodigo');
 	var codigo = document.getElementById('id-value');
 	var nombre = document.getElementById('nombre-value');
 	var imagen = document.getElementById('imagen-value');
@@ -52,8 +54,13 @@ function mostrarDato(carreraOb){
 	video.setAttribute('value', carreraOb.video);
 	descripcion.setAttribute('value', carreraOb.descripcion);
 	duracion.setAttribute('value', carreraOb.duracion);
-	categoria.setAttribute('value', carreraOb.categoria);
+	categoria.value=carreraOb.categoria;
+	var arriba=document.getElementById('inicio');
+	arriba.focus();
+	nombre.focus();
 	codigo.disabled = true;
+	codigo.removeAttribute('hidden');
+	lblcodigo.removeAttribute('hidden');
 }
 
 	 //Mostrar Carreras
@@ -78,6 +85,7 @@ function borrarCarrera(id) {
 switch(codigo) {
 			case 200: alert("Carrerar Universitaria borrada con éxito");			         
 					  document.querySelector("inventario").click();
+					  location.reload();
 					  break;
 			case 404: alert("Carrera universitaria no existe");break; }
 });	  	
@@ -89,7 +97,7 @@ switch(codigo) {
   function codigoCat(catstr) {
 	var code="null";
 	switch(catstr) {
-		case "Ingenieria":code="c1";break;
+		case "Ingeniería":code="c1";break;
 	    case "Derecho":code="c2";break;
 		case "Medicina":code="c3";break;
 		case "Economía":code="c4";break;
@@ -160,7 +168,7 @@ var orden=0;
 		nombres[nfila].innerHTML=carreras[nfila].nombre;
 		fotos[nfila].innerHTML="<img src='"+carreras[nfila].imagen+"'>";
 		fotos[nfila].firstChild.setAttribute("onclick","window.open('"+carreras[nfila].imagen+"');" );
-		videos[nfila].innerHTML="<img src='"+carreras[nfila].video+"'>";
+		videos[nfila].innerHTML="<iframe width='280' height='150'src='"+carreras[nfila].video+"'title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
 		videos[nfila].firstChild.setAttribute("onclick","window.open('"+carreras[nfila].video+"');" );		
 		}
 	}
@@ -201,12 +209,14 @@ var addresult;
 	 'Accept': 'application/json',
 	 'Content-type': 'application/json; charset=UTF-8',
 	  }}).then(response=>response.json()).then(data=>addresult=data);
+
+	  obtenerCarreras();
 	  
 }
 
 
 function agregarCarrera(){
-	var codigo = document.getElementById('id-value').value;
+	//var codigo = document.getElementById('id-value').value;
 	var nombre = document.getElementById('nombre-value').value;
 	var imagen = document.getElementById('imagen-value').value;
 	var video = document.getElementById('video-value').value;
@@ -214,7 +224,7 @@ function agregarCarrera(){
 	var duracion = document.getElementById('duracion-value').value;
 	var categoria = document.getElementById('categoria-value').value;
 	var addresult;
-	var miCarrera = {id:codigo,imagen:imagen,video:video,categoria:categoria,nombre: nombre,	descripcion:descripcion,duracion: duracion};
+	var miCarrera = {imagen:imagen,video:video,categoria:categoria,nombre: nombre,	descripcion:descripcion,duracion: duracion};
 	fetch('http://localhost:3000/carreras', {
 		method: "POST",
 		body: JSON.stringify(miCarrera),

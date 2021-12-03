@@ -10,19 +10,13 @@
 </head>
 
 <body onload="obtenerCarreras();">
- <h1>Carreras Universitarias</h1>
+ <h1 id="inicio" tabindex="0">Carreras Universitarias - Grupo04</h1>
      <h2>Universidad de El Salvador</h2>
 
 	
-		<div class="entrada">
-			<label for="id-codigo">Codigo</label>
-			<input class="input" name="codigo_id" id="id-value" cols="30" rows="1">
-			<br>
-			<label for="imagen">Imagen</label>
-			<input class="input" name="imagen" id="imagen-value" cols="30" rows="1">
-			<br>
-			<label for="video">Video</label>
-			<input class="input" name="video" id="video-value" cols="30" rows="1">
+		<div class="entrada" id="AgregarActualizar" tabindex="0">
+			<label for="id-codigo" id="lblCodigo" hidden>Codigo</label>
+			<input class="input" name="codigo_id" id="id-value" cols="30" rows="1" hidden>
 			<br>
 			<label for="nombre">Nombre</label>
 			<input  class="input" name="nombre" id="nombre-value" cols="30" rows="1">
@@ -30,15 +24,29 @@
 			<label for="descripcion">Descripción</label>
 			<input class="input" name="descripcion" id="descripcion-value" cols="30" rows="1">
 			<br>
-			<label for="duracion">Duracion</label>
+			<label for="duracion">Duraciónn (Años)</label>
 			<input class="input" name="duracion" id="duracion-value" cols="30" rows="1">	
 			<br>
-			<label for="categoria">Categoria</label>	
-			<input class="input" name="categoria" id="categoria-value" cols="30" rows="1">
+			<label for="categoria">Categoría</label>
+			<select name="categoria"  class="button" id="categoria-value">
+				<option value="Ingeniería" >Ingeniería</option>
+				<option value="Economía" >Economía</option>
+				<option value="Derecho">Derecho</option>
+				<option value="Medicina">Medicina</option>
+			</select>
+			
+			<label for="imagen">Imagen</label>
+			<input class="input" name="imagen" id="imagen-value" cols="30" rows="1">
+			<br>
+			<label for="video">Video</label>
+			<input class="input" name="video" id="video-value" cols="30" rows="1" value="https://www.youtube.com/embed/">
+			<br>
+				
+			<!--<input class="input" name="categoria" id="categoria-value" cols="30" rows="1">-->
 			<br>
 			<p></p>
 			<button onclick="botonGuardar()">Guardar</button>
-		</div>>
+		</div>
 	
 	 
 	 
@@ -50,8 +58,8 @@
 	 <input type="checkbox" id="c2" value="c2" checked>Derecho
    <input type="checkbox" id="c3" value="c3" checked>Medicina
    <input type="checkbox" id="c4" value="c4" checked>Economía
-   <ol><li>Click en la imagen para Acercamiento</li>
-   <li>Click en Nombre de la carrera o en Categoria para ordenar Asc o Desc</li></ol>   
+   
+   <div>Click en Nombre de la carrera o en Categoria para ordenar Asc o Desc por categoria</div>   
      <table id="tabla" border="1">
 	 <thead>
 	 <tr>
@@ -70,8 +78,7 @@
 	</div>
 	 </div>
 
-<button class="accion"></button>
-<button class="accion2"></button>
+
 
 </body>
 </html>

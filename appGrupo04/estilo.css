@@ -9,6 +9,10 @@ button {font-family: 'Arial';
         border: 5px solid rgb(35, 62, 139);
         margin: 5px;
     font-size: 25px;}
+    button:hover{
+        background-color: rgb(35, 62, 139);
+        color:white;
+    }
 #listado {text-align: center; font-family: 'Arial';}
 form, input {font-size: 25px;}
 thead {font-size: x-large;}
@@ -41,6 +45,13 @@ label{
 #filtroprods{
     font-family: Arial;
     font-size: 22px;
+}
+#categoria-value{
+    height: 35px;
+    font-size: medium;
+    background-color:rgb(165, 225, 173);
+    border-style: double;
+    border-radius: 5px;
 }
 /*si chequea muestra los productos sin cheque desaparecen los productos*/
 input#c1:checked ~ table tbody tr.c1 { display: table-row; }
